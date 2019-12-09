@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38097c881c31541c054b3c11f562c0fe",
+    "content-hash": "14153ca09284990d334755d22641b91a",
     "packages": [
         {
             "name": "aferrandini/urlizer",
@@ -4654,32 +4654,32 @@
         },
         {
             "name": "phpcr/phpcr-utils",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpcr/phpcr-utils.git",
-                "reference": "7301518ab9080b125868e41d0db855b8115c82a3"
+                "reference": "a239bde0d9c57ddbc549b4f46a7c26e99eeea0fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpcr/phpcr-utils/zipball/7301518ab9080b125868e41d0db855b8115c82a3",
-                "reference": "7301518ab9080b125868e41d0db855b8115c82a3",
+                "url": "https://api.github.com/repos/phpcr/phpcr-utils/zipball/a239bde0d9c57ddbc549b4f46a7c26e99eeea0fb",
+                "reference": "a239bde0d9c57ddbc549b4f46a7c26e99eeea0fb",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6|^7.0",
+                "php": "^5.6 || ^7.0",
                 "phpcr/phpcr": "~2.1.0",
-                "symfony/console": "~2.3|~3.0|^4.0"
+                "symfony/console": "^2.3|^3.0|^4.0|^5.0"
             },
             "conflict": {
                 "jackalope/jackalope-jackrabbit": "<1.2.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "^5.7 || ^6.0 || ^7.0",
                 "ramsey/uuid": "^3.5"
             },
             "suggest": {
-                "ramsey/uuid": "A PHP 5.4+ library for generating RFC 4122 version 1, 3, 4, and 5 universally unique identifiers (UUID)."
+                "ramsey/uuid": "A library for generating RFC 4122 version 1, 3, 4, and 5 universally unique identifiers (UUID)."
             },
             "bin": [
                 "bin/phpcr"
@@ -4687,7 +4687,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -4702,20 +4702,20 @@
             ],
             "authors": [
                 {
-                    "name": "Lukas Kahwe Smith",
-                    "email": "smith@pooteeweet.org"
-                },
-                {
                     "name": "David Buchmann",
                     "email": "david@liip.ch"
+                },
+                {
+                    "name": "Daniel Barsotti",
+                    "email": "daniel.barsotti@liip.ch"
                 },
                 {
                     "name": "Nacho Martín",
                     "email": "nitram.ohcan@gmail.com"
                 },
                 {
-                    "name": "Daniel Barsotti",
-                    "email": "daniel.barsotti@liip.ch"
+                    "name": "Lukas Kahwe Smith",
+                    "email": "smith@pooteeweet.org"
                 }
             ],
             "description": "PHP Content Repository implementation independant utilities",
@@ -4725,7 +4725,7 @@
                 "contentrepository",
                 "phpcr"
             ],
-            "time": "2018-02-06T16:53:00+00:00"
+            "time": "2019-12-09T09:34:54+00:00"
         },
         {
             "name": "piwik/device-detector",
@@ -10102,7 +10102,8 @@
     "platform": {
         "php": "^7.2",
         "ext-ctype": "*",
-        "ext-iconv": "*"
+        "ext-iconv": "*",
+        "ext-gd": "*"
     },
     "platform-dev": []
 }
