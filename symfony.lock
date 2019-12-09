@@ -2,6 +2,9 @@
     "aferrandini/urlizer": {
         "version": "1.0.0"
     },
+    "aws/aws-sdk-php": {
+        "version": "3.128.1"
+    },
     "behat/transliterator": {
         "version": "v1.2.0"
     },
@@ -232,6 +235,12 @@
     "layershifter/tld-support": {
         "version": "1.1.1"
     },
+    "league/flysystem": {
+        "version": "1.0.61"
+    },
+    "league/flysystem-aws-s3-v3": {
+        "version": "1.0.23"
+    },
     "massive/build-bundle": {
         "version": "0.4.0"
     },
@@ -243,6 +252,9 @@
     },
     "mtdowling/cron-expression": {
         "version": "v1.2.1"
+    },
+    "mtdowling/jmespath.php": {
+        "version": "2.4.0"
     },
     "mustangostang/spyc": {
         "version": "0.6.3"

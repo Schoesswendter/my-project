@@ -11,6 +11,10 @@
         "APP_ENV": "prod",
         "APP_SECRET": "1d8b1b19a133052aca47998db565dbe7",
         "SULU_ADMIN_EMAIL": "",
-        "MAILER_URL": "null://localhost"
+		"MAILER_URL": "null://localhost",
+		"AWS_S3_KEY": "",
+		"AWS_S3_SECRET": "",
+		"AWS_S3_BUCKET_NAME": "",
+		"AWS_S3_REGION": ""
     }
 }
