@@ -1,0 +1,16 @@
+{
+    "name": "alexmayer.net-sulu",
+    "description": "The Data Backend for alexmayer.net",
+    "repository": "https://github.com/sulu-cmf/sulu-cloud",
+    "keywords": ["cmf", "php", "symfony"],
+    "addons": ["heroku-postgresql:hobby-dev"],
+    "scripts": {
+        "postdeploy": "bin/console sulu:build dev -n"
+    },
+    "env": {
+        "APP_ENV": "prod",
+        "APP_SECRET": "",
+        "SULU_ADMIN_EMAIL": "1d8b1b19a133052aca47998db565dbe7",
+        "MAILER_URL": "null://localhost"
+    }
+}

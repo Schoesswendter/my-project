@@ -1,0 +1,1 @@
+web: heroku-php-apache2 -l var/log/website/prod.log -l var/log/website/dev.log -l var/log/admin/prod.log -l var/log/admin/dev.log public/
