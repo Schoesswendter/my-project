@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+    <img src="{{content.header_image[0].url}}" id="header_background"> 
+    <br><br><br><br>
+
+    {% for post in content.aboutme %}
+         <h3 class="about--h3">{{post.about_text}}</h3>
+        <img class="about--image" src="{{post.about_image[0].url}}">
+    {% endfor %}
+
+{% endblock %}

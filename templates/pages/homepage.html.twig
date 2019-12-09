@@ -1,0 +1,53 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    {{ content.article|raw }}
+
+    <img src="{{content.header_image[0].url}}" id="header_background"> 
+    <br><br><br><br>
+    <section id="services">
+        <h3>Leistungen</h3>
+        <div id="services--flex">
+      
+            <button id="services--flex__design">
+                {{ content.services[0].icon_title }}
+                <img src=" {{ content.services[0].icon_image[0].url }}" alt="Design-Icon">
+            </button>
+            <button id="services--flex__strategy">
+                 {{ content.services[1].icon_title }} 
+                <img src="{{ content.services[1].icon_image[0].url }}" alt="Strategy-Icon">
+            </button>
+            <button id="services--flex__consulting">
+                 {{ content.services[2].icon_title }}
+                <img src="{{ content.services[2].icon_image[0].url }}" alt="Consulting-Icon">
+            </button>
+        </div>
+    </section>
+
+    <section id="news">
+        <h3>News</h3>
+        <ul>
+            <li><a>{{content.news[0].news_name}}</a><p> -</p><p> {{content.news[0].news_description}} </p><a href={{content.news[0].news_link}}> [mehr erfahren]</a></li>
+            <li><a>{{content.news[1].news_name}}</a><p> -</p><p> {{content.news[1].news_description}} </p><a href={{content.news[1].news_link}}> [mehr erfahren]</a></li>
+            <li><a>{{content.news[2].news_name}}</a><p> -</p><p> {{content.news[2].news_description}} </p><a href={{content.news[2].news_link}}> [mehr erfahren]</a></li>
+
+        </ul>
+    </section>
+
+    <section id="references">
+        <h3>Referenzen</h3>
+        <div id="references--grid">  
+            <div id="references--grid__tinapic"><img src="{{content.referenzen[0].grid_image[0].url}}" alt="Dina Meyer"></div>
+            <blockquote id="references--grid__tinaquote">{{content.referenzen[0].grid_quote}}</blockquote>
+            <cite id="references--grid__tinacite">{{content.referenzen[0].grid_name}}</cite>
+            <div id="references--grid__tompic"><img src="{{content.referenzen[1].grid_image[0].url}}" alt="Thomas Meyer"></div>
+            <blockquote id="references--grid__tomquote">{{content.referenzen[1].grid_quote}}</blockquote>
+            <cite id="references--grid__tomcite">{{content.referenzen[1].grid_name}}</cite>
+            <span id="references--grid__tomspace"></span>
+            <div id="references--grid__pairpic"><img src="{{content.referenzen[2].grid_image[0].url}}" alt="Vorstand"></div>
+            <blockquote id="references--grid__pairquote">{{content.referenzen[2].grid_quote}}</blockquote>
+            <cite id="references--grid__paircite">{{content.referenzen[2].grid_name}}</cite>
+            <div id="references--grid__whitespace"><img src="{{content.referenzen[3].grid_image[0].url}}" alt="Quotation-Icon"></div>
+        </div>
+    </section>
+{% endblock %}

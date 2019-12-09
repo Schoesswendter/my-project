@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale|split('_')[0] }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block meta %}
+        {% include "SuluWebsiteBundle:Extension:seo.html.twig" with {
+            "seo": extension.seo|default([]),
+            "content": content|default([]),
+            "urls": urls|default([]),
+            "shadowBaseLocale": shadowBaseLocale|default(),
+            "defaultLocale": app.request.locale
+        } %}
+    {% endblock %}
+
+    {% block style %}
+        <link rel="stylesheet" href="./dist/main.css"></link>
+    {% endblock %}
+</head>
+<body>
+    <header>
+        {% block header %}
+            <nav>
+            <h1>Alex Mayer</h1>
+                <ul>
+                    <li>
+                        <a href="{{ sulu_content_root_path() }}">Homepage</a>
+                    </li>
+
+                    {% for item in sulu_navigation_root_tree('main') %}
+                        <li>
+                            <a href="{{ sulu_content_path(item.url, item.webspaceKey) }}"
+                               title="{{ item.title }}">{{ item.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+                <h2><span>Glänzende Ideen für leuchtende Augen</span></h2>
+            <button>Angebot einholen</button>
+        {% endblock %}
+    </header>
+
+    <section id="content">
+        {% block content %}{% endblock %}
+    </section>
+
+    <aside>
+        {% block aside %}{% endblock %}
+    </aside>
+
+    <footer>
+        {% block footer %}
+            <div id="footernav--flex">
+            <p>&#xa9; Alex Mayer 2018</p>
+            <nav><a>Impressum </a><p>| </p><a>Datenschutzerklärung</a></nav>
+            </div>
+            <p>Demo-Wordpress-Seite im Rahmen der LV
+            'Content Management Systeme' an der FH Salzburg von Astrid Schwarz, Aliya Abdullayeva und Michaela Schößwendter</p>
+            <p>Alle Inhalte frei erfunden</p>
+            <h4>Bildnachweis:</h4>
+            <h5>Fotos</h5>
+            <ul>
+                <li>Herofoto Tastatur: Aman Anderson, http://de.freeimages.com/photo/illuminated-keyboard-124228</li>
+                <li>Foto Dina Meyer bei Dreifachaxel [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], from Wikimedia Commons</li>
+                <li>Foto ThomasMeyer-Hermann By Thomas Meyer-Hermann (Thomas Meyer Herrmann) [GFDL (http://www.gnu.org/copyleft/fdl.html), CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0) or CC BY-SA 3.0 de (https://creative-commons.org/licenses/by-sa/3.0/de/deed.en)], via Wikimedia Commons https://upload.wikimedia.ord/wikipedia/commons/thumb/c/c6/Thomas_Meyer-Hermann_1.jpg/407px-Thomas_Meyer-Hermann_1.jpg</li>
+                <li>Foto VorstandSparkasse Ülzen [[File:SKUelzen Vorstand 2015.jpg|SKUelzen Vorstand 2015]] https://upload.wikimedia.org/wikipedia/commons/3/3e/SKUelzen_Vorstand_2015.jpg</li>
+            </ul>
+            <h5>Icons</h5>
+            <ul>
+            <li>Freepik (http://www.freepik.com) / www.flaticon.com</li>
+            </ul>
+            <p>Copyright {{ 'now'|date('Y') }} SULU</p>
+        {% endblock %}
+    </footer>
+
+    {% block javascripts %}
+    {% endblock %}
+</body>
+</html>
